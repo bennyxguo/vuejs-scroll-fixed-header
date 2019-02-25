@@ -16,7 +16,6 @@ const ScrollFixedHeader = {
       },
       data() {
         return {
-          fixed: this.fixed, // fixed status
           tag: null, // target html tag
           check: null,
           $: null

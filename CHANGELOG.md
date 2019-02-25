@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2 (Feb 25, 2019)
+
+- Remove fixed prop being return as data in the component.
+
 ## 1.0.1 (Feb 25, 2019)
 
 - Update document
