@@ -13,7 +13,7 @@
   <a href="https://www.npmjs.com/package/vuejs-scroll-fixed-header">
     <img src="https://img.shields.io/npm/dt/vuejs-scroll-fixed-header.svg" alt="Npm downloads">
   </a>
-  <a>
+  <a href="https://www.npmjs.com/package/vuejs-scroll-fixed-header">
     <img src="https://img.shields.io/npm/v/vuejs-scroll-fixed-header.svg" alt="Npm version">
   </a>
 </p>
