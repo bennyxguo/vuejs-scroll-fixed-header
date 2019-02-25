@@ -1,0 +1,44 @@
+{
+  "name": "vuejs-scroll-fixed-header",
+  "version": "1.0.1",
+  "description": "Vue2 scroll fixed header component",
+  "main": "/dist/vuejs-scroll-fixed-header.min.js",
+  "scripts": {
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TriDiamond/vuejs-scroll-fixed-header.git"
+  },
+  "keywords": [
+    "Vue2",
+    "vue-component",
+    "scroll-fixed-header",
+    "vuejs2",
+    "fixed-header"
+  ],
+  "author": "TriDiamond <bennygx@vip.qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TriDiamond/vuejs-scroll-fixed-header/issues"
+  },
+  "homepage": "https://github.com/TriDiamond/vuejs-scroll-fixed-header#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.10",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "url-loader": "^0.5.7",
+    "vue": "^2.5.13",
+    "vue-loader": "^14.1.1",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "4.19.1",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.0"
+  },
+  "dependencies": {}
+}

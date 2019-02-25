@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vuejs-countdown-timer</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/highlightjs@9.10.0/styles/github.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="dist/vuejs-scroll-fixed-header.min.js"></script>
+  <style>
+    html, body {
+      height: 100%;
+    }
+    i {
+      font-style: normal;
+      padding-left: 3px;
+    }
+    h4 {
+      width: 100%;
+    }
+    .gradient-background {
+      background: linear-gradient(230deg, #a24bcf, #4b79cf, #4bc5cf);
+      background-size: 300% 300%;
+      -webkit-animation: AnimationName 15s ease infinite;
+      -moz-animation: AnimationName 15s ease infinite;
+      animation: AnimationName 15s ease infinite;
+    }
+    .scroll-fixed-header.is-fixed {
+      -webkit-animation: FixedBarAnimation 0.28s ease-in-out;
+      -moz-animation: FixedBarAnimation 0.28s ease-in-out;
+      animation: FixedBarAnimation 0.28s ease-in-out;
+    }
+
+    @-webkit-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    @-moz-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    @keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+
+    @-webkit-keyframes FixedBarAnimation {
+      0%{transform: translateY(-100%); opacity: 0}
+      50%{transform: translateY(-50%); opacity: 0.5}
+      100%{transform: translateY(0); opacity: 1}
+    }
+    @-moz-keyframes FixedBarAnimation {
+      0%{transform: translateY(-100%); opacity: 0}
+      50%{transform: translateY(-50%); opacity: 0.5}
+      100%{transform: translateY(0); opacity: 1}
+    }
+    @keyframes FixedBarAnimation {
+      0%{transform: translateY(-100%); opacity: 0}
+      50%{transform: translateY(-50%); opacity: 0.5}
+      100%{transform: translateY(0); opacity: 1}
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+
+  <scroll-fixed-header :fixed.sync="fixed" :threshold="56">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          Vuejs Scroll Fixed Header
+        </a>
+
+        <ul class="navbar-nav d-inline-flex justify-content-end flex-row">
+          <li class="nav-item mr-3">
+            <a class="nav-link" href="https://github.com/TriDiamond/vuejs-countdown-timer/blob/master/README.md">Full Document</a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link" href="https://github.com/TriDiamond/vuejs-countdown-timer/blob/master/CHANGELOG.md">Changelog</a>
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link" href="https://github.com/TriDiamond/vuejs-countdown-timer">Github</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </scroll-fixed-header>
+
+  <div class="jumbotron jumbotron-fluid gradient-background text-white">
+    <div class="container">
+      <h5 class="display-4">vuejs-scroll-fixed-header <small>v1.0.0</small></h5>
+      <p class="lead">A simple vue 2 scroll fixed header component</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col">
+        <a href="https://circleci.com/gh/TriDiamond/vuejs-scroll-fixed-header/tree/master">
+          <img src="https://img.shields.io/circleci/project/github/TriDiamond/vuejs-scroll-fixed-header.svg" alt="Build Status">
+        </a>
+        <a href="https://github.com/TriDiamond/vuejs-scroll-fixed-header/stargazers">
+          <img src="https://img.shields.io/github/stars/TriDiamond/vuejs-scroll-fixed-header.svg" alt="Github starts">
+        </a>
+        <a>
+          <img src="https://img.shields.io/github/license/TriDiamond/vuejs-scroll-fixed-header.svg" alt="License">
+        </a>
+        <a href="https://www.npmjs.com/package/vuejs-scroll-fixed-header">
+          <img src="https://img.shields.io/npm/dt/vuejs-scroll-fixed-header.svg" alt="Npm downloads">
+        </a>
+        <a>
+          <img src="https://img.shields.io/npm/v/vuejs-scroll-fixed-header.svg" alt="Npm version">
+        </a>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <h4>About</h4>
+      <p>
+        This is a simple Vue2 component that achieve the purpose of scroll to certain height,
+        the given header will fixed at the top of the browser window
+      </p>
+    </div>
+
+    <div class="row mb-25">
+      <h4>Usage</h4>
+      <pre style="width: 100%">
+        <code class="html">
+          &lt;scroll-fixed-header :fixed.sync="fixed" :threshold="56"&gt;
+            &lt;nav class="navbar navbar-light bg-light"&gt;
+              &lt;div class="container"&gt;
+                &lt;a class="navbar-brand" href="#"&gt;
+                  Vuejs Scroll Fixed Header
+                &lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/nav&gt;
+          &lt;/scroll-fixed-header&gt;
+        </code>
+      </pre>
+    </div>
+
+    <div class="row mb-30" style="margin-bottom: 80px;">
+      <h4>Props</h4>
+      <table class="table">
+        <thead class="thead-light">
+        <tr>
+          <th scope="col">name</th>
+          <th scope="col">type</th>
+          <th scope="col">default</th>
+          <th scope="col">description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">fixed</th>
+          <td>Boolean</td>
+          <td>false</td>
+          <td>The fixed status of the current header</td>
+        </tr>
+        <tr>
+          <th scope="row">threshold</th>
+          <td>Number</td>
+          <td>0</td>
+          <td>The scroll top threshold for determining the fixed status</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data() {
+      return {
+        fixed: false
+      }
+    }
+  })
+
+  Vue.use(ScrollFixedHeader)
+</script>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/highlightjs@9.10.0/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
