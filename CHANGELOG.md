@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.3 (Feb 25, 2019)
+## 1.0.3 (Sep 8, 2020)
 
 - Fixed `The data property "fixed" is already declared as a prop` warning.
 
