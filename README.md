@@ -21,12 +21,12 @@
 > 一 Vue 2 scroll fixed header component
 
 [Demo](https://tridiamond.github.io/vuejs-scroll-fixed-header/)
-[📙中文文档](https://github.com/TriDiamond/vuejs-scroll-fixed-header/blob/master/README_CN.md)
+[📙 中文文档](https://github.com/TriDiamond/vuejs-scroll-fixed-header/blob/master/README_CN.md)
 [📙Changelog](https://github.com/TriDiamond/vuejs-scroll-fixed-header/blob/master/CHANGELOG.md)
 
 ## Installation
 
-``` bash
+```bash
 npm i vuejs-scroll-fixed-header -S
 ```
 
@@ -35,9 +35,8 @@ npm i vuejs-scroll-fixed-header -S
 ### Support
 
 | Supported Package | Version |
-|-------------------|---------|
+| ----------------- | ------- |
 | Vue               | 2.5+    |
-
 
 ### Install component and Usage
 
@@ -45,45 +44,44 @@ Import component
 
 ```es6
 // global register at main.js
-import ScrollFixedHeader from 'vuejs-scroll-fixed-header'
-Vue.use(ScrollFixedHeader)
+import ScrollFixedHeader from 'vuejs-scroll-fixed-header';
+Vue.use(ScrollFixedHeader);
 ```
 
 Vue usage
 
 ```vue
 <template>
-    <scroll-fixed-header :fixed.sync="fixed" :threshold="56">
-        <nav class="navbar navbar-light bg-light">
-          <div class="container">
-            <a class="navbar-brand" href="#">
-              Vuejs Scroll Fixed Header
-            </a>
-          </div>
-        </nav>
-    </scroll-fixed-header>
+  <scroll-fixed-header :fixed.sync="fixed" :threshold="56">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Vuejs Scroll Fixed Header</a>
+      </div>
+    </nav>
+  </scroll-fixed-header>
 </template>
 
-<script >
-  export default {
-    name: 'Timer',
-    data() {
-      return {
-        fixed: false
-      }
-    }
-  }
+<script>
+export default {
+  name: 'Timer',
+  data() {
+    return {
+      fixed: false,
+    };
+  },
+};
 </script>
 ```
 
 ### Props
 
 | Name      | Type    | Default | Description                                               |
-|-----------|---------|---------|-----------------------------------------------------------|
+| --------- | ------- | ------- | --------------------------------------------------------- |
 | fixed     | Boolean | `false` | The fixed status of the current header                    |
 | threshold | Number  | `0`     | The scroll top threshold for determining the fixed status |
-    
+
 # Liscense
+
 MIT License
 
 Copyright (c) 2019 TriDiamond

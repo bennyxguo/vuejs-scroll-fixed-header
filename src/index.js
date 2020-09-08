@@ -1,4 +1,4 @@
-import ScrollFixedHeaderComponent from './scrollFixedHeader.vue'
+import ScrollFixedHeaderComponent from './scrollFixedHeader.vue';
 
 const ScrollFixedHeader = {
   install(Vue, options) {
@@ -7,24 +7,23 @@ const ScrollFixedHeader = {
       props: {
         threshold: {
           type: Number,
-          default: 0
+          default: 0,
         },
         fixed: {
           type: Boolean,
-          default: false
-        }
+        },
       },
       data() {
         return {
           tag: null, // target html tag
           check: null,
-          $: null
-        }
+          $: null,
+        };
       },
-      mounted () {
-        this.$ = (e) => document.querySelector(e)
-        this.tag = this.getTargetTag()
-        this.scrollCheck()
+      mounted() {
+        this.$ = e => document.querySelector(e);
+        this.tag = this.getTargetTag();
+        this.scrollCheck();
       },
       methods: {
         /**
@@ -34,57 +33,57 @@ const ScrollFixedHeader = {
         getTargetTag() {
           // sougou browser support
           if (navigator.userAgent.toLowerCase().indexOf('se 2.x') > -1) {
-            return 'body'
+            return 'body';
           }
           // edge brower support
-          if (navigator.userAgent.includes('Edge'))
-            return 'body'
+          if (navigator.userAgent.includes('Edge')) return 'body';
           // firefox browser support
-          if (navigator.userAgent.includes('Firefox/') && ((+navigator.userAgent.split('Firefox/')[1]) >= 62)) {
-            return 'html'
+          if (
+            navigator.userAgent.includes('Firefox/') &&
+            +navigator.userAgent.split('Firefox/')[1] >= 62
+          ) {
+            return 'html';
           }
           // chrome browser support
-          if (!window.chrome &&
-            'WebkitAppearance' in document.documentElement.style)
-            return 'body'
-          return 'html'
+          if (!window.chrome && 'WebkitAppearance' in document.documentElement.style) return 'body';
+          return 'html';
         },
         /**
          * Check for current scroll top height has past the threshold
          */
-        scrollCheck () {
+        scrollCheck() {
           this.check = () => {
-            const { $, tag, threshold } = this
+            const { $, tag, threshold } = this;
             if (!tag) {
               return;
             }
-            this.$emit('update:fixed', $(tag).scrollTop > threshold)
-          }
-          this.registerScrollEvent()
+            this.$emit('update:fixed', $(tag).scrollTop > threshold);
+          };
+          this.registerScrollEvent();
         },
         /**
          * Register scroll listening event
          */
-        registerScrollEvent () {
-          window.addEventListener('scroll', this.check)
+        registerScrollEvent() {
+          window.addEventListener('scroll', this.check);
         },
         /**
          * Remove scroll listening event
          */
-        removeScrollEvent () {
-          window.removeEventListener('scroll', this.check)
-        }
+        removeScrollEvent() {
+          window.removeEventListener('scroll', this.check);
+        },
       },
 
       beforeDestroy() {
         this.removeScrollEvent();
-      }
-    })
-  }
-}
+      },
+    });
+  },
+};
 
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(ScrollFixedHeader)
+  window.Vue.use(ScrollFixedHeader);
 }
 
-export default ScrollFixedHeader
+export default ScrollFixedHeader;

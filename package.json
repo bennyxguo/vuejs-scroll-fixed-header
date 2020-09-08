@@ -1,6 +1,6 @@
 {
   "name": "vuejs-scroll-fixed-header",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vue2 scroll fixed header component",
   "main": "/dist/vuejs-scroll-fixed-header.min.js",
   "scripts": {
